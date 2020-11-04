@@ -1,0 +1,17 @@
+body {
+	margin: 0;
+	color: #555;
+	background: #fff;
+	font-size: 12px;
+	line-height: 1.667;
+	font-family: "arial, helvetica, sans-serif";
+}
+
+a {
+	color: #555;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #f60;
+}
