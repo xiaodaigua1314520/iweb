@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<style>
+			.pic1 {
+				transform: scale(1);/*变形*/
+				transition: all 0.5s;
+			}
+
+			.big1 {
+				transform: scale(1.5);/*变形之前的1.5倍*/
+			}
+		</style>
+	</head>
+	<body>
+		<h1>渐变动画</h1>
+		<img class="pic1" src="../img/course/01.jpg">
+		<img class="pic1" src="../img/course/02.jpg">
+		<img class="pic1" src="../img/course/03.jpg">
+		<img class="pic1" src="../img/course/04.jpg">
+		<script>
+			//鼠标悬停在图片时，添加目标class：big1
+			//查找使用的pic.1元素
+			let list=document.querySelectorAll('.pic1')
+			//console.log(list)
+			for (let i = 0; i < list. length; i++) {
+				let pic = list[i] //从数组取出图片
+				//鼠标进入该图片，则添加.big1
+				//鼠标离开该图片，则删除.big1
+				pic.onmouseenter=()=>{
+					pic.classList.add('big1')
+				}
+				pic.onmouseleave=()=>{
+					pic.classList.remove('big1')
+				}
+			}
+		</script>
+	</body>
+</html>
