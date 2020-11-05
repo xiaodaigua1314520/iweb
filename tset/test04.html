@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<link rel="stylesheet" href="../css/font-awesome.css">
+		<style>
+			.fa{
+			transform: rotateZ(180deg);
+			/*变形：缩放、平移、扭曲、旋转*/
+			/*变大变小*/
+			/*transform: scale(1.5);*/
+		}
+		.box{/*最初状态*/
+			width: 20px;
+			height: 20px;
+			background: #3a3;
+			/*css3提供的渐变动画*/
+			transition: all 3s;
+		}
+		.big{/*最终效果*/
+			width: 200px;
+			height: 100px;
+			background: #ff5500;
+		}
+		.state1{
+			transform: rotate(0);
+			transition: all 3s;
+			
+		}
+		.state2{
+			transform: rotate(180deg);
+		}
+	</style>
+	</head>
+	<body>
+		<h1>CSS3中的变形</h1>
+		<span class="fa fa-caret-down fa-3x"></span>
+		<h1>CSS3中的动画</h1>
+		<div class="box" id="b1"></div>
+		<h1>CSS3中的变形和动画</h1>
+		<span class="fa fa-heart fa-3x state1" id="h3"></span>
+		<script type="text/javascript">
+			//DIV元素点击时开始动画
+			b1.onclick = () => {
+				console.log('DIV被点击')
+				//b1.classList.add('big')
+				//b1的class包含big文件class这个文件吗
+				if (b1.classList.contains('big')) {
+					b1.classList.remove('big') //删除
+				} else {
+					b1.classList.add('big') //添加
+				}
+			}
+			h3.onmouseenter=()=>{
+				h3.classList.add('state2')
+			}
+			h3.onmouseleave=()=>{
+				h3.classList.remove('state2')
+			}
+		</script>
+	</body>
+</html>

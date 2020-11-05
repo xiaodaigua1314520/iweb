@@ -58,6 +58,7 @@
 			/* css中0.8打成.8 */
 			padding-left: .7em;
 			padding-right: .7em;
+			vertical-align: middle;
 		}
 		/*购物车重构*/
 		.search > .shoppingc > .fa-shopping-cart {
@@ -74,6 +75,7 @@
 			font-size: 2em;
 			line-height: 32px;
 			text-align: center;
+			vertical-align: middle;
 		}
 		.shoppingc{
 			width: 140px;
@@ -127,7 +129,6 @@
 		.nav_user > .user_login > a:hover {
 			color: #FFFF00;
 		}
-		
 	</style>
 </head>
 <body>
@@ -152,9 +153,11 @@
 			<!-- 我的购物车 -->
 			<div class="search">
 				<div class="shoppingc">
+					<a href="#">
 					<span class="fa fa-shopping-cart fa-2x"></span>
-					<span>我的购物车</span>
+					<span>我的购物车(<b>0</b>)</span>
 					<span class="fa fa-caret-down"></span>
+					</a>
 				</div>
 			</div>
 			<!-- 输入框 -->
