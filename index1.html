@@ -85,7 +85,7 @@
 			/*修改购物车方式，为下拉菜单提供参照物，但不脱离文档*/
 			position: relative;
 			z-index: 1;
-			/*border-bottom:none;*/
+			border-bottom:none;
 		}
 		.fa-shopping-cart {
 			padding-left: 0.6em;
@@ -117,47 +117,26 @@
 			background: #fff;
 			display: none;
 		}
-		.navbar {
-		    height: 40px;
-		    background: #57bc4c;
-		    border-bottom: 2px solid #c1eebd;
-		}
-		.nav {
-		    float: left;
-		}
-		.nav > .linav {
-			width: 78px;
-			height: 40px;
-			font-size: 15px;
+		.navbar{
+			background: #57BC4C;
+			width: 100%;
+			height: 42px;
+			border-bottom: 2px solid #C1EEBD;
 			line-height: 40px;
-			text-align: center;
+			color: #F9F9F9;
+			font-size: 1.2em;
+		}
+		.navbar.menu{
+		}
+		.navbar .menu li{
 			float: left;
-			border: 1px solid #ccc;
+			padding: 0 1.5em;
 		}
-		.nav > .linav:hover{
-			background: #3da232;
+		.navbar .menu li:hover{
+			background: #4aaf3f;
 		}
-		.nav > .linav > a {
+		.navbar .menu li a{
 			color: #fff;
-		}
-		.nav_user {
-		    float: right;
-		}
-		.nav_user > .user_login{
-			width: 140px;
-			height: 40px;
-			font-size: 15px;
-			line-height: 40px;
-			text-align: center;
-			color: #fff;
-			border: 1px solid #ccc;
-			background: #77C558;
-		}
-		.nav_user > .user_login > a {
-			color: #fff;
-		}
-		.nav_user > .user_login > a:hover {
-			color: #FFFF00;
 		}
 	</style>
 </head>
@@ -182,8 +161,8 @@
 					<img src="img/logo.png" alt="iweb LOGO">
 					<!-- 3.我的购物车 -->
 				<div class="search">
-					<div class="cart-container">
-					<div class="cart" id="myCart">
+					<div class="cart-container"id="myCart">
+					<div class="cart">
 						<span class="fa fa-shopping-cart fa-lg"></span>
 						<span>我的购物车(<b>0</b>)</span>
 						<span class="fa fa-caret-down caret" id="caret"></span>
@@ -203,34 +182,15 @@
 	<!-- 导航条 -->
 	<div class="navbar">
 		<div class="container">
-			<div class="nav">
-				<div class="linav">
-					<a href="index.html">首页</a>
-				</div>
-				<div class="linav">
-					<a href="index.html">全部课程</a>
-				</div>
-				<div class="linav">
-					<a href="index.html">基础课程</a>
-				</div>
-				<div class="linav">
-					<a href="index.html">核心课程</a>
-				</div>
-				<div class="linav">
-					<a href="index.html">进阶课程</a>
-				</div>
-				<div class="linav">
-					<a href="index.html">名师堂</a>
-				</div>
-				<div class="linav">
-					<a href="index.html">校区</a>
-				</div>
-			</div>
-			<div class="nav_user">
-				<div class="user_login">
-					<a href="#">登录</a> | <a href="#">注册</a>
-				</div>
-			</div>
+			<ul class="menu">
+					<li><a href="index1.html">首页</a></li>
+					<li><a href="course.html">全部课程</a></li>
+					<li><a href="course.html?tid=1">基础课程</a></li>
+					<li><a href="course.html?tid=2">核心课程</a></li>
+					<li><a href="course.html?tid=3">进阶课程</a></li>
+					<li><a href="teacher.html">名师堂</a></li>
+					<li><a href="school.html">校区</a></li>
+			</ul>
 		</div>
 	</div>
 	<script>
@@ -239,12 +199,12 @@
 				myCart.onmouseenter = ()=>{
 					dropdown.style.display = "block";
 					caret.classList.add('caret-rotate')
-					myCart.classList.add('shoppingc2')
+					myCart.classList.add('cart2')
 				}
 				myCart.onmouseleave = ()=>{
 					dropdown.style.display = "none"
 					caret.classList.remove('caret-rotate')
-					myCart.classList.remove('shoppingc2')
+					myCart.classList.remove('cart2')
 				}
 	</script>
 </body>
