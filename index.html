@@ -1,12 +1,74 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title></title>
-</head>
-<body>
-	
-</body>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title></title>
+		<style>
+			.main {}
+
+			.course>li {
+				width: 300px;
+				height: 250px;
+				margin: 0px 5px 200px 170px;
+				float: left;
+			}
+
+			.course>li:not(:last) {
+				margin: 10px;
+			
+			}
+		</style>
+	</head>
+	<body>
+		<div class="margin-bottom">
+			<h2 class="text-dashed text-red" style="text-align: center;">
+				<trans oldtip="What’s Hot" newtip="什么是热" style="">什么是热</trans>
+			</h2>
+			<p style="text-align: center;"><em>
+					<trans oldtip="These stories really hit the spot lately:" newtip="这些故事最近真的很受欢迎：" style="">这些故事最近真的很受欢迎：</trans>
+				</em></p>
+			<!--主体部分-->
+			<div class="main">
+				<div class="container">
+					<div class="part1">
+
+						<ul class="course">
+							<li>
+								<a href="#">
+									<img src="img/01.jpg">
+								</a>
+							</li>
+                            <li>
+                            	<a href="#">
+                            		<img src="img/02.jpg">
+                            	</a>
+                            </li>
+							<li>
+								<a href="#">
+									<img src="img/03.jpg">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/04.jpg">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/05.jpg">
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<img src="img/06.jpg">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
